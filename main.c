@@ -20,8 +20,16 @@ void escolha(int opc2){
 			printf ("---------------------------------- \n");
 			printf ("Deseja realmente sair do jogo? S - Sim / N - Não \n");
 			scanf (" %c", &resp);
-			if (resp == "S")
-				
+			if (resp == 'S')
+				exit(0);
+			else
+				system("cls");
+				menu();
+			break;
+		}
+		
+		case 1 :{
+			
 			break;
 		}
 	}
