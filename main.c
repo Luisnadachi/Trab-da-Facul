@@ -1,13 +1,75 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include<conio.h>
 #include <locale.h>
 
 int opc;
-char nick[20];
+char nick[25];
+char alt;
 
-  void Nome(){
+
+void Verifica(char alt, char correta, char correta2){
+	if (alt == correta || alt == correta2){
+		printf ("Resposta Correta!");
+	}
+	else{
+		printf ("Resposta errada!");
+	}
+}
+
+void Calculo(){
+	
+}
+
+void Terceira(){
+	
+}
+
+void Segunda(){
+	
+}
+
+void Primeira(){
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 1   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("O que significa CPU?");
+	printf ("\n");
+	printf ("A) Control Panel Unit - Unidade de Painel de Controle \n");
+	printf ("B) Central Power Unit - Unidade de Força Central  \n");
+	printf ("C) Control Power Unit - Unidade de Controle de Energia  \n");
+	printf ("D) Central Processing Unit - Unidade Central de Processamento \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	char correta = 'D';
+	char correta2 = 'd';
+	Verifica(alt, correta, correta2); 
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 1   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("O que significa CPU?");
+	printf ("\n");
+	printf ("A) Control Panel Unit - Unidade de Painel de Controle \n");
+	printf ("B) Central Power Unit - Unidade de Força Central  \n");
+	printf ("C) Control Power Unit - Unidade de Controle de Energia  \n");
+	printf ("D) Central Processing Unit - Unidade Central de Processamento \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	char correta = 'D';
+	char correta2 = 'd';
+	Verifica(alt, correta, correta2);
+	
+}
+
+void Nome(){
   	
 	system("cls");
 	printf ("---------------------------------- \n");
@@ -15,9 +77,9 @@ char nick[20];
 	printf ("---------------------------------- \n");
 	printf ("\n");
 	printf ("Digite o Nome do Participante: \n");
-	scanf (" %c", &nick);
+	scanf (" %s", &nick);
 	system("cls");
-	printf ("Seja Bem vindo %c \n", nick);
+	printf ("Seja Bem vindo %s \n", nick);
 	printf ("Este é um jogo de perguntas e respostas. O jogador deverá escolher, ");
 	printf ("dentre as 4 alternativas apenas uma e em seguida pressionar enter. ");
 	printf ("Para mais informacões, acesse a opcão intrucões do menu do jogo.");
@@ -61,7 +123,7 @@ void Escolha(int opc2){
 		}
 		
 		case 2 :{
-			
+			Primeira();
 			break;
 		}
 		
@@ -93,7 +155,7 @@ void Escolha(int opc2){
 			printf (" jogar o game completo.");
 			printf ("\n");
 			printf ("Sistema de pontuacao do game. \n");
-			printf ("Nível fácil - Cada resposta certa valerá 150 pontos");
+			printf ("Nível fácil - Cada resposta certa valerá 150 pontos \n");
 			printf ("Nível médio - Cada resposta certa valerá 200 pontos \n");
 			printf ("Nível difícil - Cada resposta certa valerá 250 pontos \n");
 			printf ("\n");
