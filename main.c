@@ -2,22 +2,58 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <locale.h>
+#include <string.h>
+
 
 int opc;
 char nick[25];
 char alt;
+char correta;
+char correta2;
+int acertos_f;
+int pontos_f;
+float porc_f;
+//int final = 0;
+//int primeira = 1;
 
 
 void Verifica(char alt, char correta, char correta2){
 	if (alt == correta || alt == correta2){
-		printf ("Resposta Correta!");
+		printf ("Resposta Correta! \n");
+		Calculo_Facil();
 	}
 	else{
-		printf ("Resposta errada!");
+		printf ("Resposta errada! \n");
+		printf ("A resposta certa é %c:", correta);
 	}
 }
 
-void Calculo(){
+void Calculo_Facil(){
+	//if (primeira == 1){
+	//	pontos_f = 0;
+	//	porc_f = 0;
+	//	final = 0;
+//	}
+	//else{
+		pontos_f += 150;
+		acertos_f += 1;
+		//if (final == 1){
+		//	porc_f = (porc_f * 10) / (100 * acertos_f);
+	//	}
+	//}
+		
+	
+}
+
+void Calculo_Medio(){
+	
+}
+
+void Calculo_Dificil(){
+	
+}
+
+void Calculo_Total(){
 	
 }
 
@@ -31,23 +67,7 @@ void Segunda(){
 
 void Primeira(){
 	
-	system("cls");
-	printf ("*--------------------------------*");
-	printf ("|  Pergunta 1   - Nível Fácil  |");
-	printf ("*--------------------------------*");
-	printf ("\n");
-	printf ("O que significa CPU?");
-	printf ("\n");
-	printf ("A) Control Panel Unit - Unidade de Painel de Controle \n");
-	printf ("B) Central Power Unit - Unidade de Força Central  \n");
-	printf ("C) Control Power Unit - Unidade de Controle de Energia  \n");
-	printf ("D) Central Processing Unit - Unidade Central de Processamento \n");
-	printf ("\n");
-	printf ("Qual a alternativa certa? \n");
-	scanf (" %c", &alt);
-	char correta = 'D';
-	char correta2 = 'd';
-	Verifica(alt, correta, correta2); 
+	//primeira = 1;
 	
 	system("cls");
 	printf ("*--------------------------------*");
@@ -63,10 +83,174 @@ void Primeira(){
 	printf ("\n");
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
-	char correta = 'D';
-	char correta2 = 'd';
-	Verifica(alt, correta, correta2);
+	Verifica(alt, correta = 'D', correta2 = 'd');
+	Calculo_Facil();
+	Sleep(1000); 
 	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 2   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("Quais são as principais fabricantes de processadores para Desktops e notebooks? ");
+	printf ("\n");
+	printf ("A) Intel e Dell  \n");
+	printf ("B) Dell e AMD   \n");
+	printf ("C) Intel e AMD  \n");
+	printf ("D) AMD e IBM  \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	Verifica(alt, correta = 'A', correta2 = 'a');
+	Calculo_Facil();
+	Sleep(1000); 
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 3   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("\n");
+	printf ("A) Apitos agudos da placa-mãe \n");
+	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
+	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
+	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	Verifica(alt, correta = 'B', correta2 = 'b');
+	Calculo_Facil();
+	Sleep(1000);
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 4   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("\n");
+	printf ("A) Apitos agudos da placa-mãe \n");
+	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
+	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
+	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	Verifica(alt, correta = 'B', correta2 = 'b');
+	Calculo_Facil();
+	Sleep(1000); 
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 5   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("\n");
+	printf ("A) Apitos agudos da placa-mãe \n");
+	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
+	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
+	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	Verifica(alt, correta = 'B', correta2 = 'b');
+	Calculo_Facil();
+	Sleep(1000); 
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 6   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("\n");
+	printf ("A) Apitos agudos da placa-mãe \n");
+	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
+	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
+	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	Verifica(alt, correta = 'B', correta2 = 'b');
+	Calculo_Facil();
+	Sleep(1000); 
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 7   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("\n");
+	printf ("A) Apitos agudos da placa-mãe \n");
+	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
+	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
+	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	Verifica(alt, correta = 'B', correta2 = 'b');
+	Calculo_Facil();
+	Sleep(1000); 
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 8   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("\n");
+	printf ("A) Apitos agudos da placa-mãe \n");
+	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
+	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
+	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	Verifica(alt, correta = 'B', correta2 = 'b');
+	Calculo_Facil();
+	Sleep(1000); 
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 9   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("\n");
+	printf ("A) Apitos agudos da placa-mãe \n");
+	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
+	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
+	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	Verifica(alt, correta = 'B', correta2 = 'b');
+	Calculo_Facil();
+	Sleep(1000); 
+	
+	system("cls");
+	printf ("*--------------------------------*");
+	printf ("|  Pergunta 10   - Nível Fácil  |");
+	printf ("*--------------------------------*");
+	printf ("\n");
+	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("\n");
+	printf ("A) Apitos agudos da placa-mãe \n");
+	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
+	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
+	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("\n");
+	printf ("Qual a alternativa certa? \n");
+	scanf (" %c", &alt);
+	Verifica(alt, correta = 'B', correta2 = 'b');
+	//final = 1;
+	Calculo_Facil();
+	Sleep(1000);  
+	
+
 }
 
 void Nome(){
@@ -118,21 +302,28 @@ void Escolha(int opc2){
 		}
 		
 		case 1 :{
+			
 			Nome();
+			Primeira();
+			Segunda();
+			Terceira();
 			break;
 		}
 		
 		case 2 :{
+			Nome();
 			Primeira();
 			break;
 		}
 		
 		case 3 :{
+			Nome();
 			
 			break;
 		}
 		
 		case 4 :{
+			Nome();
 			
 			break;
 		}
@@ -192,7 +383,7 @@ void Escolha(int opc2){
 			printf("Renato Augusto \n");
 			Sleep(5000);
 			system("cls");
-			Menu();
+			main();
 	
 			break;
 		}
