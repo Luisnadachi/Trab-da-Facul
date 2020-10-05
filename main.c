@@ -12,9 +12,9 @@ char correta;
 char correta2;
 int acertos_f;
 int pontos_f;
-float porc_f;
-//int final = 0;
-//int primeira = 1;
+int primeira = 1;
+char esc2;
+float porc;
 
 
 void Verifica(char alt, char correta, char correta2){
@@ -24,25 +24,36 @@ void Verifica(char alt, char correta, char correta2){
 	}
 	else{
 		printf ("Resposta errada! \n");
-		printf ("A resposta certa é %c:", correta);
+		printf ("A resposta certa é: %c", correta);
 	}
 }
 
-void Calculo_Facil(){
-	//if (primeira == 1){
-	//	pontos_f = 0;
-	//	porc_f = 0;
-	//	final = 0;
-//	}
-	//else{
+double Calculo_Porc( int acertos_f){
+	
+	float porc_f
+
+	porc_f = acertos_f * 10;
+	
+	return (porc_f);
+	
+}
+
+int Calculo_Facil(){
+	if (primeira == 1){
+		primeira = 0;
+		pontos_f = 0;
 		pontos_f += 150;
 		acertos_f += 1;
-		//if (final == 1){
-		//	porc_f = (porc_f * 10) / (100 * acertos_f);
-	//	}
-	//}
 		
-	
+		return (pontos_f, acertos_f);
+	}
+	else{
+		pontos_f += 150;
+		acertos_f += 1;
+		
+		return (pontos_f, acertos_f);
+	}
+		
 }
 
 void Calculo_Medio(){
@@ -50,10 +61,6 @@ void Calculo_Medio(){
 }
 
 void Calculo_Dificil(){
-	
-}
-
-void Calculo_Total(){
 	
 }
 
@@ -67,7 +74,7 @@ void Segunda(){
 
 void Primeira(){
 	
-	//primeira = 1;
+	primeira = 1;
 	
 	system("cls");
 	printf ("*--------------------------------*");
@@ -84,7 +91,6 @@ void Primeira(){
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
 	Verifica(alt, correta = 'D', correta2 = 'd');
-	Calculo_Facil();
 	Sleep(1000); 
 	
 	system("cls");
@@ -102,7 +108,6 @@ void Primeira(){
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
 	Verifica(alt, correta = 'A', correta2 = 'a');
-	Calculo_Facil();
 	Sleep(1000); 
 	
 	system("cls");
@@ -120,7 +125,6 @@ void Primeira(){
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
 	Verifica(alt, correta = 'B', correta2 = 'b');
-	Calculo_Facil();
 	Sleep(1000);
 	
 	system("cls");
@@ -128,17 +132,16 @@ void Primeira(){
 	printf ("|  Pergunta 4   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("O que quer dizer bug ? ");
 	printf ("\n");
-	printf ("A) Apitos agudos da placa-mãe \n");
-	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
-	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
-	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("A) É a memória que facilita as tarefas e liberta o processador.  \n");
+	printf ("B) É um tipo de periférico.  \n");
+	printf ("C) É um erro de programação.   \n");
+	printf ("D) É uma peça de hardware   \n");
 	printf ("\n");
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
-	Verifica(alt, correta = 'B', correta2 = 'b');
-	Calculo_Facil();
+	Verifica(alt, correta = 'C', correta2 = 'c');
 	Sleep(1000); 
 	
 	system("cls");
@@ -146,17 +149,16 @@ void Primeira(){
 	printf ("|  Pergunta 5   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("O SPAM atualmente em 2012 corresponde a aproximadamente:  ");
 	printf ("\n");
-	printf ("A) Apitos agudos da placa-mãe \n");
-	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
-	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
-	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("A) 50%% de todos os emails \n");
+	printf ("B) 40%% de todos os bancos de dados mundiais  \n");
+	printf ("C) 80%% de todos os provedores de internet    \n");
+	printf ("D) 32%% da internet   \n");
 	printf ("\n");
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
-	Verifica(alt, correta = 'B', correta2 = 'b');
-	Calculo_Facil();
+	Verifica(alt, correta = 'A', correta2 = 'a');
 	Sleep(1000); 
 	
 	system("cls");
@@ -174,7 +176,6 @@ void Primeira(){
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
 	Verifica(alt, correta = 'B', correta2 = 'b');
-	Calculo_Facil();
 	Sleep(1000); 
 	
 	system("cls");
@@ -192,7 +193,6 @@ void Primeira(){
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
 	Verifica(alt, correta = 'B', correta2 = 'b');
-	Calculo_Facil();
 	Sleep(1000); 
 	
 	system("cls");
@@ -210,7 +210,6 @@ void Primeira(){
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
 	Verifica(alt, correta = 'B', correta2 = 'b');
-	Calculo_Facil();
 	Sleep(1000); 
 	
 	system("cls");
@@ -218,17 +217,16 @@ void Primeira(){
 	printf ("|  Pergunta 9   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("O número binário 10101010 equivale a qual número decimal apresentado: ");
 	printf ("\n");
-	printf ("A) Apitos agudos da placa-mãe \n");
-	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
-	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
-	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("A) 140  \n");
+	printf ("B )150  \n");
+	printf ("C) 160  \n");
+	printf ("D) 170  \n");
 	printf ("\n");
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
-	Verifica(alt, correta = 'B', correta2 = 'b');
-	Calculo_Facil();
+	Verifica(alt, correta = 'D', correta2 = 'd');
 	Sleep(1000); 
 	
 	system("cls");
@@ -236,21 +234,35 @@ void Primeira(){
 	printf ("|  Pergunta 10   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("É um tipo de computador que tem como função controlar as demais estacões de trabalho quando ligados em uma rede de computadores: ");
 	printf ("\n");
-	printf ("A) Apitos agudos da placa-mãe \n");
-	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
-	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
-	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("A) Estação de trabalho.  \n");
+	printf ("B) UMPC  \n");
+	printf ("C) Servidor \n");
+	printf ("D) Desktop  \n");
 	printf ("\n");
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
-	Verifica(alt, correta = 'B', correta2 = 'b');
-	//final = 1;
-	Calculo_Facil();
+	
+	Verifica(alt, correta = 'C', correta2 = 'c');
 	Sleep(1000);  
 	
-
+	system("cls");
+	
+	porc = Calculo_Porc(pontos_f, acertos_f);
+	
+	printf ("Pontuação do jogador:%s \n", nick);
+	printf ("A sua pontuação foi de: %d \n", pontos_f);
+	printf ("A porcentagem de acerto foi de:%% %4.2f \n", porc);
+	
+	printf ("\n");
+	
+	printf ("Aperte ENTER para ir pro menu ou ESC para sair!");
+	scanf("%c",&esc2);
+	if (esc2 == "")
+	
+	
+	return;
 }
 
 void Nome(){
@@ -267,6 +279,8 @@ void Nome(){
 	printf ("Este é um jogo de perguntas e respostas. O jogador deverá escolher, ");
 	printf ("dentre as 4 alternativas apenas uma e em seguida pressionar enter. ");
 	printf ("Para mais informacões, acesse a opcão intrucões do menu do jogo.");
+	
+	return;
 	
 } 
 
@@ -400,6 +414,8 @@ void Escolha(int opc2){
 			break;
 		}
 	}
+	
+	return;
 
 }
 
@@ -424,6 +440,8 @@ void Menu() {
 	system("cls");
 	
 	Escolha(opc);
+	
+	return;
 }
 
 int main(int argc, char *argv[]) 
