@@ -4,23 +4,20 @@
 #include <locale.h>
 #include <string.h>
 
+#define esc 27
 
 int opc;
 char nick[25];
-char alt;
-char correta;
-char correta2;
-int acertos_f;
-int pontos_f;
-int primeira = 1;
-char esc2;
+char alt, correta, correta2, esc2;
+int acertos_f, pontos_f;
+int primeira = 1, nivel = 0;
 float porc;
 
 
 void Verifica(char alt, char correta, char correta2){
 	if (alt == correta || alt == correta2){
 		printf ("Resposta Correta! \n");
-		Calculo_Facil();
+		Calculo();
 	}
 	else{
 		printf ("Resposta errada! \n");
@@ -30,7 +27,7 @@ void Verifica(char alt, char correta, char correta2){
 
 double Calculo_Porc( int acertos_f){
 	
-	float porc_f
+	float porc_f;
 
 	porc_f = acertos_f * 10;
 	
@@ -38,30 +35,34 @@ double Calculo_Porc( int acertos_f){
 	
 }
 
-int Calculo_Facil(){
-	if (primeira == 1){
-		primeira = 0;
-		pontos_f = 0;
-		pontos_f += 150;
-		acertos_f += 1;
+int Calculo(){
+	switch (nivel){
 		
-		return (pontos_f, acertos_f);
+		case 1:{
+			if (primeira == 1){
+				primeira = 0;
+				pontos_f = 0;
+				pontos_f += 150;
+				acertos_f += 1;
+		
+				return (pontos_f, acertos_f);
+			}
+			else{
+				pontos_f += 150;
+				acertos_f += 1;
+		
+				return (pontos_f, acertos_f);
+				}
+			break;
+		}
+		
+		case 2:{
+			
+			break;
+		}
 	}
-	else{
-		pontos_f += 150;
-		acertos_f += 1;
-		
-		return (pontos_f, acertos_f);
-	}
-		
-}
-
-void Calculo_Medio(){
 	
-}
-
-void Calculo_Dificil(){
-	
+		
 }
 
 void Terceira(){
@@ -75,13 +76,14 @@ void Segunda(){
 void Primeira(){
 	
 	primeira = 1;
+	nivel = 1;
 	
 	system("cls");
 	printf ("*--------------------------------*");
 	printf ("|  Pergunta 1   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("O que significa CPU?");
+	printf ("O que significa CPU:");
 	printf ("\n");
 	printf ("A) Control Panel Unit - Unidade de Painel de Controle \n");
 	printf ("B) Central Power Unit - Unidade de Força Central  \n");
@@ -98,7 +100,7 @@ void Primeira(){
 	printf ("|  Pergunta 2   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("Quais são as principais fabricantes de processadores para Desktops e notebooks? ");
+	printf ("Quais são as principais fabricantes de processadores para Desktops e notebooks: ");
 	printf ("\n");
 	printf ("A) Intel e Dell  \n");
 	printf ("B) Dell e AMD   \n");
@@ -115,7 +117,7 @@ void Primeira(){
 	printf ("|  Pergunta 3   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("Quais são os sintomas mais comuns de superaquecimento do processador: ");
 	printf ("\n");
 	printf ("A) Apitos agudos da placa-mãe \n");
 	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
@@ -132,7 +134,7 @@ void Primeira(){
 	printf ("|  Pergunta 4   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("O que quer dizer bug ? ");
+	printf ("O que quer dizer bug: ");
 	printf ("\n");
 	printf ("A) É a memória que facilita as tarefas e liberta o processador.  \n");
 	printf ("B) É um tipo de periférico.  \n");
@@ -166,16 +168,16 @@ void Primeira(){
 	printf ("|  Pergunta 6   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("A velocidade dos processadores atuais é normalmente medida em:  ");
 	printf ("\n");
-	printf ("A) Apitos agudos da placa-mãe \n");
-	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
-	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
-	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("A) Hertz ou Hz   \n");
+	printf ("B) Gigahertz ou GHz  \n");
+	printf ("C) Quilo byte ou Kb   \n");
+	printf ("D) Megabyte ou MB   \n");
 	printf ("\n");
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
-	Verifica(alt, correta = 'B', correta2 = 'b');
+	Verifica(alt, correta = 'A', correta2 = 'a');
 	Sleep(1000); 
 	
 	system("cls");
@@ -183,12 +185,12 @@ void Primeira(){
 	printf ("|  Pergunta 7   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("O formato padrão dos arquivos gerados pelo Word é:  ");
 	printf ("\n");
-	printf ("A) Apitos agudos da placa-mãe \n");
-	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
-	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
-	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("A) txt. \n");
+	printf ("B) doc. \n");
+	printf ("C) xls. \n");
+	printf ("D) html. \n");
 	printf ("\n");
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
@@ -200,16 +202,16 @@ void Primeira(){
 	printf ("|  Pergunta 8   - Nível Fácil  |");
 	printf ("*--------------------------------*");
 	printf ("\n");
-	printf ("Quais são os sintomas mais comuns de superaquecimento do processador ? ");
+	printf ("A extensão padrão de arquivos de áudio no windows é:  ");
 	printf ("\n");
-	printf ("A) Apitos agudos da placa-mãe \n");
-	printf ("B) Reinicios e congelamentos inesperados da máquina \n");
-	printf ("C) Cheiro de queimado que exala de dentro do gabinete   \n");
-	printf ("D) Imagem corrompida, com cores trocadas e manchas  \n");
+	printf ("A) WAV. \n");
+	printf ("B) BIN. \n");
+	printf ("C) ARC. \n");
+	printf ("D) WMF.  \n");
 	printf ("\n");
 	printf ("Qual a alternativa certa? \n");
 	scanf (" %c", &alt);
-	Verifica(alt, correta = 'B', correta2 = 'b');
+	Verifica(alt, correta = 'A', correta2 = 'a');
 	Sleep(1000); 
 	
 	system("cls");
@@ -249,17 +251,24 @@ void Primeira(){
 	
 	system("cls");
 	
-	porc = Calculo_Porc(pontos_f, acertos_f);
+	porc = Calculo_Porc(acertos_f);
 	
 	printf ("Pontuação do jogador:%s \n", nick);
 	printf ("A sua pontuação foi de: %d \n", pontos_f);
 	printf ("A porcentagem de acerto foi de:%% %4.2f \n", porc);
 	
 	printf ("\n");
-	
-	printf ("Aperte ENTER para ir pro menu ou ESC para sair!");
-	scanf("%c",&esc2);
-	if (esc2 == "")
+		
+	if (esc2 == 0x0A || esc2 != 27){
+		system("cls");
+		Sleep(1000);
+		Menu();
+	}
+	else{
+		printf("Saindo do Jogo!");
+		Sleep(2000);
+		exit(0);
+	}
 	
 	
 	return;
@@ -327,6 +336,8 @@ void Escolha(int opc2){
 		case 2 :{
 			Nome();
 			Primeira();
+			printf ("Aperte ENTER para ir pro menu ou ESC para sair! \n");
+			esc2 = _getch();
 			break;
 		}
 		
