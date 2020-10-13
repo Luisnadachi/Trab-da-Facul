@@ -1,3 +1,8 @@
+/*
+	Alunos: Luis Eduardo R. Teixeira (20102361)
+			Renato Augusto (20102357)
+			Pedro Paulo F Cavalcante (20102471)
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -107,19 +112,19 @@ void Terceira(){
 	
 	system("cls");
 	
-	printf ("*-----------------------------------------------*");
-	printf ("|| XXX    XX  XX  XX     XX  XXXXXXX  XX       ||");
-	printf ("|| XX X   XX  XX  XX     XX  XX       XX       ||");
-	printf ("|| XX  X  XX  XX   XX   XX   XXXXX    XX       ||");
-	printf ("|| XX   X XX  XX    XX XX    XX       XX       ||");
-	printf ("|| XX    XXX  XX     XXX     XXXXXXX  XXXXXX   ||");
-	printf ("*-----------------------------------------------*");
-	printf ("|| XXXXXX    XX  XXXXX  XX   XXXXX  XX  XX     ||");
-	printf ("|| XX    XX  XX  XX     XX  XX      XX  XX     ||");
-	printf ("|| xX    XX  XX  XXXX   XX  XX      XX  XX     ||");
-	printf ("|| xX    XX  XX  XX     XX  XX      XX  XX     ||");
-	printf ("|| XXXXXX    XX  XX     XX   XXXXX  XX  XXXXXX ||");
-	printf ("*-----------------------------------------------*");
+	printf ("*-----------------------------------------------* \n");
+	printf ("|| XXX    XX  XX  XX     XX  XXXXXXX  XX       || \n");
+	printf ("|| XX X   XX  XX  XX     XX  XX       XX       || \n");
+	printf ("|| XX  X  XX  XX   XX   XX   XXXXX    XX       || \n");
+	printf ("|| XX   X XX  XX    XX XX    XX       XX       || \n");
+	printf ("|| XX    XXX  XX     XXX     XXXXXXX  XXXXXX   || \n");
+	printf ("*-----------------------------------------------* \n");
+	printf ("|| XXXXXX    XX  XXXXX  XX   XXXXX  XX  XX     || \n");
+	printf ("|| XX    XX  XX  XX     XX  XX      XX  XX     || \n");
+	printf ("|| xX    XX  XX  XXXX   XX  XX      XX  XX     || \n");
+	printf ("|| xX    XX  XX  XX     XX  XX      XX  XX     || \n");
+	printf ("|| XXXXXX    XX  XX     XX   XXXXX  XX  XXXXXX || \n");
+	printf ("*-----------------------------------------------* \n");
 	Sleep (2000);
 	system("cls");
 	printf ("*--------------------------------*");
@@ -497,19 +502,19 @@ void Segunda(){
 	
 	system("cls");
 	
-	printf ("*-----------------------------------------------*");
-	printf ("|| XXX    XX  XX  XX     XX  XXXXXXX  XX       ||");
-	printf ("|| XX X   XX  XX  XX     XX  XX       XX       ||");
-	printf ("|| XX  X  XX  XX   XX   XX   XXXXX    XX       ||");
-	printf ("|| XX   X XX  XX    XX XX    XX       XX       ||");
-	printf ("|| XX    XXX  XX     XXX     XXXXXXX  XXXXXX   ||");
-	printf ("*-----------------------------------------------*");
-	printf ("|| XXXX   XXXX  XXXXXX  XXXXXXX    XX   XXXXX  ||");
-	printf ("|| XX XX XX XX  XX      XX    XX   XX  XX   XX ||");
-	printf ("|| XX  XXX  XX  XXXXX   XX     XX  XX  XX   XX ||");
-	printf ("|| XX   X   XX  XX      XX    XX   XX  XX   XX ||");
-	printf ("|| XX       XX  XXXXXX  XXXXXXX    XX   XXXXX  ||");
-	printf ("*-----------------------------------------------*");
+	printf ("*-----------------------------------------------* \n");
+	printf ("|| XXX    XX  XX  XX     XX  XXXXXXX  XX       || \n");
+	printf ("|| XX X   XX  XX  XX     XX  XX       XX       || \n");
+	printf ("|| XX  X  XX  XX   XX   XX   XXXXX    XX       || \n");
+	printf ("|| XX   X XX  XX    XX XX    XX       XX       || \n");
+	printf ("|| XX    XXX  XX     XXX     XXXXXXX  XXXXXX   || \n");
+	printf ("*-----------------------------------------------* \n");
+	printf ("|| XXXX   XXXX  XXXXXX  XXXXXXX    XX   XXXXX  || \n");
+	printf ("|| XX XX XX XX  XX      XX    XX   XX  XX   XX || \n");
+	printf ("|| XX  XXX  XX  XXXXX   XX     XX  XX  XX   XX || \n");
+	printf ("|| XX   X   XX  XX      XX    XX   XX  XX   XX || \n");
+	printf ("|| XX       XX  XXXXXX  XXXXXXX    XX   XXXXX  || \n");
+	printf ("*-----------------------------------------------* \n");
 	Sleep (2000);
 	
 	system("cls");
@@ -827,8 +832,8 @@ void Escolha(int opc){
 			printf ("Deseja realmente sair do jogo? S - Sim / N - Não \n");
 			scanf (" %c", &resp);
 			
-			if (resp == 'S' || resp == 'N'){
-				if (resp == 'S')
+			if (resp == 'S' || resp == 'N' || resp == 's' || resp == 'n'){
+				if (resp == 'S' || resp = 's')
 					exit(0);
 				else{
 					system("cls");
